@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Acronym Dictionary</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="https://unpkg.com/sakura.css/css/sakura.css">
+  <style>
+    .search-box { margin: 1em 0; }
+    table { width: 100%; }
+    th, td { text-align: left; padding: 0.5em; }
+  </style>
+</head>
+<body>
+  <h1>Acronym Dictionary</h1>
+  <input class="search-box" type="text" id="search" placeholder="Type to filter acronyms..." autofocus>
+
+  <table id="acronym-table">
+    <thead>
+      <tr>
+        <th>Acronym</th>
+        <th>Meaning</th>
+      </tr>
+    </thead>
+    <tbody id="table-body">
+      <!-- Data rows go here -->
+    </tbody>
+  </table>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js"></script>
+  <script>
+    async function loadCSVAndRenderTable() {
+      const response = await fetch('data/acronyms.csv');
+      const csvText = await response.text();
+      const data = Papa.parse(csvText, {header: true, skipEmptyLines: true}).data;
+
+      // Render table
+      const tbody = document.getElementById('table-body');
+      function renderRows(rows) {
+        tbody.innerHTML = '';
+        for (const row of rows) {
+          if(row.Acronym && row.Meaning) {
+            const tr = document.createElement('tr');
+            tr.innerHTML = `<td>${row.Acronym}</td><td>${row.Meaning}</td>`;
+            tbody.appendChild(tr);
+          }
+        }
+      }
+      renderRows(data);
+
+      // Filter logic
+      const search = document.getElementById('search');
+      search.addEventListener('input', function() {
+        const value = this.value.toLowerCase();
+        const filtered = data.filter(row =>
+          (row.Acronym && row.Acronym.toLowerCase().includes(value)) ||
+          (row.Meaning && row.Meaning.toLowerCase().includes(value))
+        );
+        renderRows(filtered);
+      });
+    }
+    loadCSVAndRenderTable();
+  </script>
+</body>
+</html>
