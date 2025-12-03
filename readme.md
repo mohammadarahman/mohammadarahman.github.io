@@ -25,4 +25,5 @@ This is collections of documents for learning and project too.
 [recipe](docs/recipe/recipe.md)  
 [DPTF](docs/dptf/dptf.md)  
 [Coding questions](docs/Coding/coding.md)  
+[Acronyms](acronyms.html)  
  
