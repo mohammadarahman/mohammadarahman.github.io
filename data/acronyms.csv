@@ -654,3 +654,4 @@ TPT,Through Put Time – amount of time taken to do a particular job.,,
 TRB,Tapeout Review Board,,
 TRF,"Tooling Request Form – The form used to approve a Tapeout for flows, money expenditure.  Contains plate revision/plate title, CD, CSID, Barcode, PDS, LUV, Lookup Version, FAB, Cost Center, and other information. OBSOLETE",,
 TRIFECTA,"Tapeout, RET, IMO, FAB Execution and Commit Tracking Automation",,
+TOMARS, TapeOut Metric And Reports System, https://tapeout-dev.intel.com/tomars_beta/#/

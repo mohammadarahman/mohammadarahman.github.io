@@ -2,7 +2,20 @@
 This is collections of documents for learning and project too. 
 # cheatsheet  
 
-## External link  
+
+
+## Local link Topics
+
+[my sublimeshortcut](docs/misc/sublime_shortcut.md)  
+[my md tips](docs/misc/mdcheatsheet.md)  
+[how to](docs/howto/howto.md)  
+[recipe](docs/recipe/recipe.md)  
+[Tapeout](docs/tapeout/tapeout.md)  
+[Coding questions](docs/Coding/coding.md)  
+[Acronyms](acronyms.html)  
+ 
+ 
+ ## External link  
 
 [md cheatsheet](https://help.github.com/en/articles/basic-writing-and-formatting-syntax#styling-text)  
 [md Extensions for python](https://github.com/Python-Markdown/markdown/wiki/third-party-extensions)  
@@ -17,13 +30,5 @@ This is collections of documents for learning and project too.
 [online cv example](https://github.com/sharu725/online-cv)  
 
 
-## Local link Topics
-
-[my sublimeshortcut](docs/misc/sublime_shortcut.md)  
-[my md tips](docs/misc/mdcheatsheet.md)  
-[how to](docs/howto/howto.md)  
-[recipe](docs/recipe/recipe.md)  
+## Old 
 [DPTF](docs/dptf/dptf.md)  
-[Coding questions](docs/Coding/coding.md)  
-[Acronyms](acronyms.html)  
- 
